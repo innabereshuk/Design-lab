@@ -243,6 +243,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
+    transition: all .3s ease-in-out;
 }
 
 .menu {
@@ -250,8 +251,9 @@ nav {
     list-style: none;
     justify-content: center;
     padding: 0;
-    margin: 0;
+  
 }
+
 
 .menu__item {
     margin: 0 15px;
@@ -263,6 +265,7 @@ nav {
     color: #fff;
     font-weight: 500;
     font-size: 2.4rem;
+    transition: all .3s ease-in-out;
 }
 
 .toggler {
@@ -277,6 +280,7 @@ nav {
     z-index: 10;
 }
 
+
 .menu {
     display: flex;
     justify-content: center;
@@ -295,6 +299,7 @@ nav {
     color: #fff;
     font-weight: 500;
     font-size: 2.4rem;
+    transition: all .3s ease-in-out;
 }
 
 @media screen and (max-width:960px) {
@@ -328,10 +333,22 @@ nav {
         position: fixed;
         right: 15px;
         top: 15px;
+        z-index: 2;
     }
 
     .toggler svg {
         fill: #fff;
+    }
+
+    #square {
+         transform-origin: 75% 25%;
+         transform: rotate(45deg) translate(8%, -5%);
+         transition: all .8s ease-out;
+    }
+
+    .menu-opened #square {
+        transform: rotate(370deg) translate(10%, -10%);
+        transition: all .8s ease-in-out;
     }
 
     .menu {
@@ -339,20 +356,24 @@ nav {
         background: #afbacf;
         padding: 60px 0 30px;
         margin: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        transform: translate(0, -100%);
+        transition: all .4s ease-in-out;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .menu-opened .menu {
+        transform: translate(0, 0);
+        transition: all .4s ease-in-out;
+        opacity: 1;
     }
 
     .menu__item {
         margin: 0 15px;
-    }
-
-    .toggler svg {
-        fill: #fff;
-    }
-
-    .menu {
-        flex-direction: column;
-        background: #afbacf;
-        padding: 60px 0 30px;
     }
 
     .section__wrap {
@@ -376,5 +397,7 @@ nav {
        padding: 100px 0 80px;
     }
 }
+
+
 
 

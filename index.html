@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header class="section section--bg" style="background-image: url(image/hero-bg.jpg);">
+<body class="menu-opened">
+    <header class="section section--bg bg" style="background-image: url(image/hero-bg.jpg);">
         <nav>
             <div class="container">
-                <a href="#" class="toggler">
-                    <svg width="50" height="50" >
-                        <use xlink:href="#menu"></use>
+                <a href="#" class="toggler" id="toggler">
+                    <svg width="50" height="50" viewbox="0 0 512 512">
+                        <path d="M212.667 55H69.3333C61.4109 55 55 61.4109 55 69.3333V212.667C55 220.589 61.4109 227 69.3333 227H212.667C220.589 227 227 220.589 227 212.667V169.667V69.3333C227 61.4109 220.589 55 212.667 55ZM198.333 198.333H83.6667V83.6667H198.333V198.333Z"/>
+                        <path d="M212.667 285H69.3333C61.4109 285 55 291.411 55 299.333V442.667C55 450.589 61.4109 457 69.3333 457H212.667C220.589 457 227 450.589 227 442.667V299.333C227 291.411 220.589 285 212.667 285ZM198.333 428.333H83.6667V313.667H198.333V428.333Z"/>
+                        <path id="square" d="M452.789 180.163C458.404 174.548 458.404 165.451 452.789 159.836L352.164 59.2112C346.549 53.5963 337.452 53.5963 331.837 59.2112L231.211 159.836C228.404 162.644 227 166.322 227 170C227 173.678 228.404 177.356 231.211 180.163L331.837 280.789C334.644 283.596 338.322 285 342 285C345.678 285 349.356 283.596 352.164 280.789L452.789 180.163ZM261.702 170L342 89.7019L422.298 170L342 250.298L261.702 170Z"/>
+                        <path d="M442.667 285H342.333H299.333C291.411 285 285 291.411 285 299.333V442.667C285 450.589 291.411 457 299.333 457H442.667C450.589 457 457 450.589 457 442.667V299.333C457 291.411 450.589 285 442.667 285ZM428.333 428.333H313.667V313.667H428.333V428.333Z"/>
                     </svg>               
                 </a>
                 <ul class="menu">
@@ -55,7 +58,7 @@
     </header>
 
     <main id="main">
-        <section class="section" id="about">
+        <section class="section bg" id="about">
             <div class="container">
                 <div class="section__wrap section__wrap--bordered">
                     <h2 class="section__title">Abaut us</h2>
@@ -72,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section--bg" id="services">
+        <section class="section section--bg bg" id="services">
             <div class="container">
                 <div class="section__wrap section__wrap--bordered">
                     <h2>SERVICES</h2>
@@ -84,7 +87,7 @@
                 </div>
             </div>
         </section>
-        <section class="section" id="whot-we-do">
+        <section class="section bg" id="whot-we-do">
             <div class="container">
                 <div class="section__wrap section__wrap--bordered">
                     <h2 class="section__title">what we do</h2>
@@ -121,7 +124,7 @@
                 </div>
             </div>
         </section>
-        <section class="gallery" id="projects">
+        <section class="gallery bg" id="projects">
             <a href="#" class="gallery__item">
                 <img src="image/layer1.jpg" alt="" class="gallery__img">
                 <span class="gallery__title">Topworkz</span>
@@ -148,7 +151,7 @@
             </a>
         </section>
     </main>
-    <footer class="section" id="contact-us">
+    <footer class="section bg" id="contact-us">
         <div class="container">
             <div class="section__wrap section__wrap--bordered">
                 <h2 class="section__title">Contact us</h2>
@@ -191,14 +194,72 @@
         <symbol id="management" viewbox="0 0 79 91">
             <path fill-rule="evenodd"  fill="rgb(60, 60, 60)" d="M76.888,91.000 L2.081,91.000 C0.920,91.000 -0.011,90.075 -0.011,88.921 L-0.011,13.483 C-0.011,12.340 0.920,11.405 2.081,11.405 L22.548,11.405 C22.767,8.224 25.435,5.719 28.679,5.719 L34.673,5.719 C34.705,2.570 37.300,0.013 40.480,0.013 C43.670,0.013 46.254,2.570 46.296,5.719 L52.281,5.719 C55.534,5.719 58.202,8.224 58.422,11.405 L76.888,11.405 C78.049,11.405 78.981,12.340 78.981,13.483 L78.981,88.921 C78.981,90.075 78.049,91.000 76.888,91.000 ZM54.259,11.842 C54.259,10.761 53.381,9.877 52.282,9.877 L45.743,9.877 C43.745,9.877 42.113,8.257 42.113,6.271 L42.113,5.793 C42.113,4.899 41.380,4.171 40.481,4.171 C39.591,4.171 38.859,4.899 38.859,5.793 L38.859,6.271 C38.859,8.255 37.226,9.877 35.218,9.877 L28.679,9.877 C27.591,9.877 26.711,10.761 26.711,11.842 L26.713,11.842 L26.713,16.103 L54.259,16.103 L54.259,11.842 ZM74.794,15.562 L58.441,15.562 L58.441,18.181 C58.441,19.335 57.510,20.260 56.349,20.260 L24.618,20.260 C23.457,20.260 22.526,19.335 22.526,18.181 L22.526,15.562 L4.173,15.562 L4.173,86.843 L74.794,86.843 L74.794,15.562 ZM19.768,32.375 L21.757,34.350 L26.843,29.298 C27.455,28.689 28.449,28.689 29.062,29.298 C29.675,29.906 29.675,30.894 29.062,31.503 L22.867,37.657 C22.559,37.962 22.157,38.114 21.756,38.114 C21.354,38.114 20.953,37.962 20.647,37.657 L17.549,34.580 C16.937,33.971 16.937,32.984 17.549,32.375 C18.162,31.766 19.155,31.766 19.768,32.375 ZM19.768,45.715 L21.757,47.689 L26.843,42.638 C27.455,42.029 28.449,42.029 29.062,42.638 C29.676,43.246 29.675,44.234 29.062,44.843 L22.867,50.997 C22.559,51.302 22.157,51.454 21.756,51.454 C21.354,51.454 20.953,51.301 20.647,50.997 L17.549,47.920 C16.937,47.311 16.937,46.324 17.549,45.715 C18.162,45.106 19.155,45.106 19.768,45.715 ZM19.768,59.055 L21.757,61.031 L26.843,55.979 C27.455,55.370 28.449,55.370 29.062,55.979 C29.675,56.588 29.675,57.575 29.062,58.184 L22.867,64.339 C22.559,64.643 22.157,64.794 21.756,64.794 C21.354,64.794 20.953,64.642 20.647,64.338 L17.549,61.261 C16.937,60.652 16.937,59.664 17.549,59.055 C18.162,58.447 19.155,58.447 19.768,59.055 ZM19.768,72.397 L21.757,74.373 L26.843,69.321 C27.455,68.712 28.449,68.712 29.062,69.321 C29.676,69.930 29.675,70.917 29.062,71.526 L22.867,77.680 C22.559,77.984 22.157,78.137 21.756,78.137 C21.354,78.137 20.953,77.984 20.647,77.680 L17.549,74.602 C16.937,73.993 16.937,73.006 17.549,72.397 C18.162,71.789 19.155,71.789 19.768,72.397 ZM35.637,31.919 L54.311,31.919 C55.177,31.919 55.880,32.617 55.880,33.478 C55.880,34.339 55.178,35.037 54.311,35.037 L35.637,35.037 C34.771,35.037 34.068,34.339 34.068,33.478 C34.068,32.617 34.771,31.919 35.637,31.919 ZM35.637,45.260 L54.311,45.260 C55.177,45.260 55.880,45.958 55.880,46.819 C55.880,47.680 55.178,48.378 54.311,48.378 L35.637,48.378 C34.771,48.378 34.068,47.680 34.068,46.819 C34.068,45.958 34.771,45.260 35.637,45.260 ZM35.637,58.600 L54.311,58.600 C55.177,58.600 55.880,59.297 55.880,60.159 C55.880,61.020 55.178,61.717 54.311,61.717 L35.637,61.717 C34.771,61.717 34.068,61.020 34.068,60.159 C34.068,59.297 34.771,58.600 35.637,58.600 ZM35.637,71.940 L54.311,71.940 C55.177,71.940 55.880,72.638 55.880,73.499 C55.880,74.360 55.178,75.058 54.311,75.058 L35.637,75.058 C34.771,75.058 34.068,74.360 34.068,73.499 C34.068,72.638 34.771,71.940 35.637,71.940 ZM40.485,10.140 C41.595,10.140 42.494,11.034 42.494,12.137 C42.494,13.239 41.595,14.133 40.485,14.133 C39.375,14.133 38.475,13.239 38.475,12.137 C38.475,11.034 39.375,10.140 40.485,10.140 Z"/>
         </symbol>
+  </svg>
+    
+    <script>
+        (function(){
+            let toggler = document.getElementById('toggler');
 
-        <symbol id="menu" viewbox="0 0 462 462">
-            <path d="m181.5 0h-165c-9.12 0-16.5 7.38-16.5 16.5v165c0 9.12 7.38 16.5 16.5 16.5h165c9.12 0 16.5-7.38 16.5-16.5v-49.5-115.5c0-9.12-7.38-16.5-16.5-16.5zm-16.5 165h-132v-132h132z"/>
-            <path d="m181.5 264h-165c-9.12 0-16.5 7.38-16.5 16.5v165c0 9.12 7.38 16.5 16.5 16.5h165c9.12 0 16.5-7.38 16.5-16.5v-165c0-9.12-7.38-16.5-16.5-16.5zm-16.5 165h-132v-132h132z"/>
-            <path d="m445.5 264h-115.5-49.5c-9.12 0-16.5 7.38-16.5 16.5v165c0 9.12 7.38 16.5 16.5 16.5h165c9.12 0 16.5-7.38 16.5-16.5v-165c0-9.12-7.38-16.5-16.5-16.5zm-16.5 165h-132v-132h132z"/>
-            <path d="m457.166 143.666c6.445-6.445 6.445-16.887 0-23.332l-115.5-115.5c-6.445-6.445-16.887-6.445-23.332 0l-115.5 115.5c-3.223 3.223-4.834 7.444-4.834 11.666s1.611 8.443 4.834 11.666l115.5 115.5c3.223 3.223 7.444 4.834 11.666 4.834s8.443-1.611 11.666-4.834c0 0 115.5-115.5 115.5-115.5zm-219.334-11.666 92.168-92.168 92.168 92.168-92.168 92.168s-92.168-92.168-92.168-92.168z"/>
-        </symbol>
-    </svg>
-    <script src="https://kit.fontawesome.com/d357e3b57e.js" crossorigin="anonymous"></script>
+            toggler.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.body.classList.toggle('menu-opened');
+            })
+
+            let links = document.querySelectorAll('.menu__link');
+
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    document.body.classList.remove('menu-opened');
+                })
+            })
+
+            let sections = document.querySelectorAll('.bg');
+            window.addEventListener('scroll', function() {
+
+                document.body.classList.remove('menu-opened');
+               
+                let firstViewportSection = null;
+                sections.forEach(function(section) {
+                    let rect = section.getBoundingClientRect();
+
+                    if (!firstViewportSection) {
+                        if (rect.bottom  > 60) {
+                            firstViewportSection = section;
+                        }
+                    }
+
+                })
+                
+                let svg = document.querySelector('.toggler svg');
+                let nav = document.querySelector('nav');
+                let classList = firstViewportSection.classList;
+                if (!(classList.contains('section--bg') || 
+                        (classList.contains('gallery')))) {
+                            
+                        svg.style.fill = '#afbacf';
+                   
+                   if (window.innerWidth > 576) {
+                        links.forEach(function(link){
+                            link.style.color = '#ffffff';
+                        });
+                        
+                        nav.style.backgroundColor = 'rgb(175, 186, 207, .6)';
+                    }
+                } else {
+                    svg.style.fill = '#ffffff';
+                    
+                    if (window.innerWidth > 576) {
+                        links.forEach(function(link){
+                            link.style.color = '#88839e';
+                        });
+                        
+                         nav.style.backgroundColor = 'rgb(255, 255, 255, .6)'
+                    }
+                }
+                
+            })
+            
+            })();
+    </script>
 </body>
 </html>
